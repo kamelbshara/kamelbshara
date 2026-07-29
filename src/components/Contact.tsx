@@ -1,0 +1,45 @@
+import { Download, Mail, MapPin, Phone } from "lucide-react";
+import { profile } from "@/data/content";
+import SectionHeading from "./SectionHeading";
+
+export default function Contact() {
+  return (
+    <section id="contact" className="mx-auto max-w-6xl px-6 py-24">
+      <SectionHeading eyebrow="06 — Contact" title="Let's build something together" />
+
+      <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-8">
+        <p className="mb-8 max-w-xl leading-relaxed text-[var(--color-muted)]">
+          I&apos;m looking for opportunities in AI and EdTech — whether that&apos;s applying AI to
+          real classroom problems, building AI-powered products, or teaching the next generation
+          of learners. If that sounds like your team, let&apos;s talk.
+        </p>
+
+        <div className="grid gap-4 sm:grid-cols-3">
+          <a
+            href={`mailto:${profile.email}`}
+            className="flex items-center gap-3 rounded-xl border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+          >
+            <Mail size={18} /> {profile.email}
+          </a>
+          <a
+            href={`tel:${profile.phone.replace(/\s/g, "")}`}
+            className="flex items-center gap-3 rounded-xl border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+          >
+            <Phone size={18} /> {profile.phone}
+          </a>
+          <span className="flex items-center gap-3 rounded-xl border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-muted)]">
+            <MapPin size={18} /> {profile.location}
+          </span>
+        </div>
+
+        <a
+          href={profile.cvFile}
+          download
+          className="mt-8 inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-[var(--color-bg)] transition hover:brightness-110"
+        >
+          <Download size={16} /> Download full CV (PDF)
+        </a>
+      </div>
+    </section>
+  );
+}
