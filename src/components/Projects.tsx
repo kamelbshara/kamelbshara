@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ExternalLink, Sparkles } from "lucide-react";
+import { BrainCircuit, ExternalLink, Sparkles } from "lucide-react";
 import { projects, type Project } from "@/data/content";
 import SectionHeading from "./SectionHeading";
 
@@ -12,9 +12,14 @@ function ProjectCard({ project }: { project: Project }) {
     <div className="overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)]">
       <div className="flex flex-wrap items-start justify-between gap-4 border-b border-[var(--color-border)] p-6">
         <div>
-          <span className="mb-2 inline-flex items-center gap-1 rounded-full bg-[var(--color-surface-2)] px-3 py-1 text-xs font-medium text-[var(--color-accent)]">
-            <Sparkles size={12} /> {project.status}
-          </span>
+          <div className="mb-2 flex flex-wrap gap-2">
+            <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-surface-2)] px-3 py-1 text-xs font-medium text-[var(--color-accent)]">
+              <Sparkles size={12} /> {project.status}
+            </span>
+            <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-surface-2)] px-3 py-1 text-xs font-medium text-[var(--color-accent)]">
+              <BrainCircuit size={12} /> AI-Powered
+            </span>
+          </div>
           <h3 className="text-xl font-semibold text-[var(--color-ink)]">{project.name}</h3>
           <p className="mt-1 text-sm text-[var(--color-muted)]">{project.tagline}</p>
         </div>
