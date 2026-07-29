@@ -179,6 +179,38 @@ export const projects: Project[] = [
     status: "Live",
   },
   {
+    slug: "sat360",
+    name: "SAT360",
+    tagline: "SAT training app to level up student skills",
+    description:
+      "A dedicated SAT training platform built to help students strengthen their skills and prepare for the SAT — practice-driven and structured around steady, measurable improvement.",
+    role: "Creator & builder",
+    stack: ["Web application", "Vercel"],
+    features: [
+      "Structured SAT practice built to level up student skills over time",
+      "Focused, practice-driven prep experience for students",
+    ],
+    link: "https://sat360.vercel.app/",
+    status: "Live",
+  },
+  {
+    slug: "smart-teacher-profile",
+    name: "Smart Teacher Profile",
+    tagline: "AI teaching assistant that documents, plans, and follows up",
+    description:
+      "An AI-powered teacher assistant that acts as a full teaching companion — documenting classroom work, generating lesson plans and reports, analyzing student grades, and following up on student progress as they move forward.",
+    role: "Creator & builder",
+    stack: ["Web application", "AI-generated content", "Vercel"],
+    features: [
+      "Generates lesson plans and reports automatically",
+      "Documents teaching activity in one place",
+      "Analyzes student grades and tracks progress over time",
+      "Follows up on students as they progress, not just a one-time snapshot",
+    ],
+    link: "https://smart-teacher-profile.vercel.app/",
+    status: "Live",
+  },
+  {
     slug: "ai-math-exam-generator",
     name: "AI Math Exam Question Generator",
     tagline: "AI-cloned final exam questions for Grade 10 Advanced Math",
@@ -233,29 +265,44 @@ export const education = [
   { degree: "School Leadership Licence", org: "Ministry of Education", period: "2025 –" },
 ];
 
-export type Award = {
+export type PersonalAward = {
   title: string;
   titleAr?: string;
   org: string;
   year: string;
 };
 
-export const awards: Award[] = [
+export const personalAwards: PersonalAward[] = [
   {
     title: "Best Playwright — Abu Dhabi School Theatre Festival",
     titleAr: "أفضل كاتب مسرحي في مهرجان أبوظبي للمسرح المدرسي",
     org: "Abu Dhabi School Theatre Festival",
     year: "2023",
   },
+];
+
+export type ProjectRecognition = {
+  title: string;
+  project: string;
+  org: string;
+  year: string;
+  myRole: string;
+};
+
+export const projectRecognitions: ProjectRecognition[] = [
   {
     title: "AIA Middle East Honor Award",
-    org: "American Institute of Architects — KAFD Conference Center, Riyadh, KSA",
+    project: "KAFD Conference Center, Riyadh, KSA",
+    org: "American Institute of Architects",
     year: "2018",
+    myRole: "Part of the project construction team — Project Engineer",
   },
   {
     title: "LEED Gold Certification",
-    org: "KAFD Conference Center — sustainable design & energy performance, Riyadh, KSA",
+    project: "KAFD Conference Center, Riyadh, KSA",
+    org: "Sustainable design & energy performance",
     year: "2017",
+    myRole: "Part of the project construction team — Project Engineer",
   },
 ];
 

@@ -1,14 +1,14 @@
 import { Award as AwardIcon } from "lucide-react";
-import { awards } from "@/data/content";
+import { personalAwards } from "@/data/content";
 import SectionHeading from "./SectionHeading";
 
 export default function Awards() {
   return (
     <section id="awards" className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeading eyebrow="03 — Awards" title="Recognition along the way" />
+      <SectionHeading eyebrow="03 — Awards" title="Personal recognition" />
 
       <div className="grid gap-4 sm:grid-cols-2">
-        {awards.map((award, i) => (
+        {personalAwards.map((award, i) => (
           <div
             key={i}
             className="flex items-start gap-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6"
@@ -17,7 +17,7 @@ export default function Awards() {
               <AwardIcon className="text-[var(--color-accent)]" size={20} />
             </div>
             <div>
-              <div className="mb-1 flex items-center gap-3">
+              <div className="mb-1 flex flex-wrap items-center gap-3">
                 <h3 className="font-semibold text-[var(--color-ink)]">{award.title}</h3>
                 <span className="font-mono text-xs text-[var(--color-accent)]">{award.year}</span>
               </div>
