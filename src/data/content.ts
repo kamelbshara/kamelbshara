@@ -265,33 +265,41 @@ export const education = [
   { degree: "School Leadership Licence", org: "Ministry of Education", period: "2025 –" },
 ];
 
-export type Award = {
+export type PersonalAward = {
   title: string;
   titleAr?: string;
   org: string;
   year: string;
-  kind: "Personal Award" | "Project I Worked On";
 };
 
-export const awards: Award[] = [
+export const personalAwards: PersonalAward[] = [
   {
     title: "Best Playwright — Abu Dhabi School Theatre Festival",
     titleAr: "أفضل كاتب مسرحي في مهرجان أبوظبي للمسرح المدرسي",
     org: "Abu Dhabi School Theatre Festival",
     year: "2023",
-    kind: "Personal Award",
   },
+];
+
+export type ProjectRecognition = {
+  title: string;
+  project: string;
+  org: string;
+  year: string;
+};
+
+export const projectRecognitions: ProjectRecognition[] = [
   {
     title: "AIA Middle East Honor Award",
-    org: "American Institute of Architects — KAFD Conference Center, Riyadh, KSA",
+    project: "KAFD Conference Center, Riyadh, KSA",
+    org: "American Institute of Architects",
     year: "2018",
-    kind: "Project I Worked On",
   },
   {
     title: "LEED Gold Certification",
-    org: "KAFD Conference Center — sustainable design & energy performance, Riyadh, KSA",
+    project: "KAFD Conference Center, Riyadh, KSA",
+    org: "Sustainable design & energy performance",
     year: "2017",
-    kind: "Project I Worked On",
   },
 ];
 
