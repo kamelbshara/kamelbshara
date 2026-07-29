@@ -7,7 +7,7 @@ export const profile = {
   phone: "+971 54 777 8522",
   languages: "Arabic (Native) · English (IELTS Academic 6.5)",
   vision:
-    "Mathematics educator and school leader with 8+ years of project management experience, now building AI-powered tools for education.",
+    "Civil engineer turned mathematics educator, now channeling both disciplines into AI-powered tools that help schools work smarter.",
   objectives: [
     "Apply years of mathematical thinking to tech and AI roles that solve real problems.",
     "Use data and analytical skills to help teams build smarter, more effective solutions.",
@@ -17,9 +17,9 @@ export const profile = {
 };
 
 export const stats = [
-  { value: "8", label: "Years in Project Management" },
-  { value: "7", label: "Years in Education" },
-  { value: "5", label: "Years in Mid-Leadership" },
+  { value: "2011–2019", label: "Project Management (Civil Engineering)" },
+  { value: "2019–Present", label: "Mathematics Education" },
+  { value: "2021–Present", label: "Mid-Leadership" },
 ];
 
 export type Experience = {
@@ -100,6 +100,7 @@ export const skills: SkillGroup[] = [
       "Prompt engineering",
       "LLM-powered app features",
       "Data-driven decision making",
+      "Big data analysis (beginner)",
     ],
   },
   {
@@ -181,13 +182,13 @@ export const projects: Project[] = [
   {
     slug: "sat360",
     name: "SAT360",
-    tagline: "SAT training app to level up student skills",
+    tagline: "AI-powered SAT training app to level up student skills",
     description:
-      "A dedicated SAT training platform built to help students strengthen their skills and prepare for the SAT — practice-driven and structured around steady, measurable improvement.",
+      "An AI-powered SAT training platform built to help students strengthen their skills and prepare for the SAT — practice-driven and structured around steady, measurable improvement.",
     role: "Creator & builder",
-    stack: ["Web application", "Vercel"],
+    stack: ["Web application", "AI-generated content", "Vercel"],
     features: [
-      "Structured SAT practice built to level up student skills over time",
+      "AI-generated, structured SAT practice built to level up student skills over time",
       "Focused, practice-driven prep experience for students",
     ],
     link: "https://sat360.vercel.app/",
@@ -245,13 +246,13 @@ export const projects: Project[] = [
   {
     slug: "math-exam-prep-platform",
     name: "Math Exam Prep Platform",
-    tagline: "Structured practice for final math exam preparation",
+    tagline: "AI-powered structured practice for final math exam preparation",
     description:
-      "A platform built to get students exam-ready for their final math exams — structured practice students can work through directly ahead of exam day.",
+      "An AI-powered platform built to get students exam-ready for their final math exams — structured practice students can work through directly ahead of exam day.",
     role: "Creator & builder",
-    stack: ["Google Apps Script"],
+    stack: ["Google Apps Script", "AI-generated content"],
     features: [
-      "Structured practice materials aligned to final math exam content",
+      "AI-generated practice materials aligned to final math exam content",
       "Built for direct student self-study ahead of finals",
     ],
     link: "https://script.google.com/macros/s/AKfycbyBk-ZdKzIMilz3pWrXP4FN0IzKloL2IhmrLlBnFcqGy2LEycCI0jQWlcmHQtBdljxV/exec",
