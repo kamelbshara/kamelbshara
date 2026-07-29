@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -19,7 +20,14 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)]/60 bg-[var(--color-bg)]/80 backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#top" className="font-semibold tracking-tight text-[var(--color-ink)]">
+        <a href="#top" className="flex items-center gap-2 font-semibold tracking-tight text-[var(--color-ink)]">
+          <Image
+            src="/brand.jpg"
+            alt="Kamel Bshara"
+            width={32}
+            height={32}
+            className="h-8 w-8 rounded-full border border-[var(--color-border)] object-cover"
+          />
           Kamel Bshara
         </a>
 

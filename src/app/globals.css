@@ -4,14 +4,14 @@
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
-  --color-bg: #05070d;
-  --color-surface: #0d1220;
-  --color-surface-2: #131a2c;
-  --color-border: #1f2a44;
-  --color-ink: #e8ecf6;
-  --color-muted: #94a1c2;
-  --color-accent: #5eead4;
-  --color-accent-2: #818cf8;
+  --color-bg: #050b08;
+  --color-surface: #0b140f;
+  --color-surface-2: #101d16;
+  --color-border: #1c3327;
+  --color-ink: #e7f5ec;
+  --color-muted: #92a89d;
+  --color-accent: #4ade80;
+  --color-accent-2: #10b981;
 }
 
 html {
@@ -26,13 +26,6 @@ body {
 ::selection {
   background-color: var(--color-accent);
   color: var(--color-bg);
-}
-
-.bg-grid {
-  background-image:
-    linear-gradient(to right, rgba(148, 161, 194, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(148, 161, 194, 0.06) 1px, transparent 1px);
-  background-size: 40px 40px;
 }
 
 .text-gradient {
