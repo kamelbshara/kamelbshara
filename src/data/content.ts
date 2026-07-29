@@ -7,7 +7,7 @@ export const profile = {
   phone: "+971 54 777 8522",
   languages: "Arabic (Native) · English (IELTS Academic 6.5)",
   vision:
-    "Educator-turned-technologist with a strong mathematics foundation and 8 years of project management experience, passionate about using AI and data to build smarter solutions and drive real-world impact.",
+    "Mathematics educator and school leader with 8+ years of project management experience, now building AI-powered tools for education.",
   objectives: [
     "Apply years of mathematical thinking to tech and AI roles that solve real problems.",
     "Use data and analytical skills to help teams build smarter, more effective solutions.",
@@ -163,6 +163,53 @@ export const projects: Project[] = [
       "Companion mobile app (iOS/Android via Expo) for teachers on the go",
     ],
     link: "https://kbws.vercel.app",
+    status: "Live",
+  },
+  {
+    slug: "ai-math-exam-generator",
+    name: "AI Math Exam Question Generator",
+    tagline: "AI-cloned final exam questions for Grade 10 Advanced Math",
+    description:
+      "A tool built to speed up exam writing — feed it an existing final exam question and it uses AI to generate cloned variants at matching difficulty and topic coverage, built specifically for Grade 10 Advanced mathematics finals.",
+    role: "Creator & builder",
+    stack: ["Google Apps Script", "AI question generation"],
+    features: [
+      "Clones an existing exam question into fresh AI-generated variants at the same difficulty",
+      "Purpose-built for Grade 10 Advanced math final exams",
+      "Cuts down exam-writing time while keeping question banks curriculum-aligned",
+    ],
+    link: "https://script.google.com/macros/s/AKfycbzL8vGjjkCf3WfEvDoYTWL8Ci1hT8u-KgUgVgD7l5RnsjTcHa_cKWM32uYEVqnPP8ZfBw/exec",
+    status: "Live",
+  },
+  {
+    slug: "grade-analysis-follow-up",
+    name: "Smart Grade Analysis & Follow-Up Planner",
+    tagline: "Automated grade analysis with AI-generated follow-up plans",
+    description:
+      "A tool that analyzes student grades and automatically generates a smart follow-up plan per student or class — flagging who needs support and tracking whether that follow-up actually happens over time.",
+    role: "Creator & builder",
+    stack: ["Google Apps Script", "Data analysis"],
+    features: [
+      "Analyzes student grade data to surface trends and at-risk students",
+      "Generates a smart, actionable follow-up plan automatically",
+      "Tracks follow-up completion over time",
+    ],
+    link: "https://script.google.com/macros/s/AKfycby6I_X5W2uuS_rCoyykn6Ozk0v-U6hRnBGqg5guQx74g9HVY_y0Im0DchyvOyx6O4jb/exec",
+    status: "Live",
+  },
+  {
+    slug: "math-exam-prep-platform",
+    name: "Math Exam Prep Platform",
+    tagline: "Structured practice for final math exam preparation",
+    description:
+      "A platform built to get students exam-ready for their final math exams — structured practice students can work through directly ahead of exam day.",
+    role: "Creator & builder",
+    stack: ["Google Apps Script"],
+    features: [
+      "Structured practice materials aligned to final math exam content",
+      "Built for direct student self-study ahead of finals",
+    ],
+    link: "https://script.google.com/macros/s/AKfycbyBk-ZdKzIMilz3pWrXP4FN0IzKloL2IhmrLlBnFcqGy2LEycCI0jQWlcmHQtBdljxV/exec",
     status: "Live",
   },
 ];
