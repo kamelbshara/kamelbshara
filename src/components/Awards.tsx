@@ -1,11 +1,16 @@
+"use client";
+
 import { Award as AwardIcon } from "lucide-react";
-import { personalAwards } from "@/data/content";
+import { useLanguage } from "@/i18n/LanguageContext";
 import SectionHeading from "./SectionHeading";
 
 export default function Awards() {
+  const { content, ui, locale } = useLanguage();
+  const { personalAwards } = content;
+
   return (
     <section id="awards" className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeading eyebrow="03 — Awards" title="Personal recognition" />
+      <SectionHeading eyebrow={ui.awards.eyebrow} title={ui.awards.title} />
 
       <div className="grid gap-4 sm:grid-cols-2">
         {personalAwards.map((award, i) => (
@@ -22,7 +27,7 @@ export default function Awards() {
                 <span className="font-mono text-xs text-[var(--color-accent)]">{award.year}</span>
               </div>
               <p className="text-sm text-[var(--color-muted)]">{award.org}</p>
-              {award.titleAr && (
+              {locale === "en" && award.titleAr && (
                 <p dir="rtl" className="mt-1 text-sm text-[var(--color-muted)]">
                   {award.titleAr}
                 </p>

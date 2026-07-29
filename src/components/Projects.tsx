@@ -2,11 +2,19 @@
 
 import { useState } from "react";
 import { BrainCircuit, ExternalLink, Sparkles } from "lucide-react";
-import { projects, type Project } from "@/data/content";
+import { useLanguage } from "@/i18n/LanguageContext";
+import type { Project } from "@/data/content";
+import type { UiStrings } from "@/i18n/ui";
 import SectionHeading from "./SectionHeading";
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({ project, ui }: { project: Project; ui: UiStrings }) {
   const [tab, setTab] = useState<"overview" | "features" | "stack">("overview");
+
+  const tabLabels = {
+    overview: ui.projects.overview,
+    features: ui.projects.features,
+    stack: ui.projects.stack,
+  } as const;
 
   return (
     <div className="overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)]">
@@ -14,10 +22,10 @@ function ProjectCard({ project }: { project: Project }) {
         <div>
           <div className="mb-2 flex flex-wrap gap-2">
             <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-surface-2)] px-3 py-1 text-xs font-medium text-[var(--color-accent)]">
-              <Sparkles size={12} /> {project.status}
+              <Sparkles size={12} /> {ui.projects.statusLabels[project.status]}
             </span>
             <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-surface-2)] px-3 py-1 text-xs font-medium text-[var(--color-accent)]">
-              <BrainCircuit size={12} /> AI-Powered
+              <BrainCircuit size={12} /> {ui.projects.aiPowered}
             </span>
           </div>
           <h3 className="text-xl font-semibold text-[var(--color-ink)]">{project.name}</h3>
@@ -31,7 +39,7 @@ function ProjectCard({ project }: { project: Project }) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-4 py-2 text-sm font-medium text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
           >
-            Visit <ExternalLink size={14} />
+            {ui.projects.visit} <ExternalLink size={14} />
           </a>
         )}
       </div>
@@ -41,13 +49,13 @@ function ProjectCard({ project }: { project: Project }) {
           <button
             key={t}
             onClick={() => setTab(t)}
-            className={`rounded-t-lg px-3 pb-3 capitalize transition ${
+            className={`rounded-t-lg px-3 pb-3 transition ${
               tab === t
                 ? "border-b-2 border-[var(--color-accent)] text-[var(--color-ink)]"
                 : "text-[var(--color-muted)] hover:text-[var(--color-ink)]"
             }`}
           >
-            {t}
+            {tabLabels[t]}
           </button>
         ))}
       </div>
@@ -91,17 +99,20 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 export default function Projects() {
+  const { content, ui } = useLanguage();
+  const { projects } = content;
+
   return (
     <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeading eyebrow="06 — Projects" title="What I've built" />
+      <SectionHeading eyebrow={ui.projects.eyebrow} title={ui.projects.title} />
 
       <div className="grid gap-6">
         {projects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
+          <ProjectCard key={project.slug} project={project} ui={ui} />
         ))}
 
         <div className="rounded-2xl border border-dashed border-[var(--color-border)] p-8 text-center text-sm text-[var(--color-muted)]">
-          More projects on the way — this list grows as I ship.
+          {ui.projects.moreComing}
         </div>
       </div>
     </section>

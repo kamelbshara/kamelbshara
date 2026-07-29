@@ -4,17 +4,19 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown, Download, Mail } from "lucide-react";
-import { profile } from "@/data/content";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
+  const { content, ui } = useLanguage();
+  const { profile } = content;
 
   useEffect(() => {
     const id = setInterval(() => {
       setRoleIndex((i) => (i + 1) % profile.roles.length);
     }, 2400);
     return () => clearInterval(id);
-  }, []);
+  }, [profile.roles.length]);
 
   return (
     <section
@@ -38,7 +40,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.05 }}
             className="text-4xl font-bold tracking-tight text-[var(--color-ink)] sm:text-6xl"
           >
-            Hi, I&apos;m {profile.name}.
+            {ui.hero.greeting} {profile.name}.
           </motion.h1>
 
           <div className="mt-3 h-10 sm:h-12">
@@ -69,7 +71,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="mt-6 flex flex-wrap gap-2"
           >
-            {["AI", "Education", "Engineering", "Design"].map((tag) => (
+            {ui.hero.tags.map((tag) => (
               <span
                 key={tag}
                 className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface)]/60 px-3 py-1 font-mono text-xs tracking-wide text-[var(--color-accent)]"
@@ -90,13 +92,13 @@ export default function Hero() {
               download
               className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-[var(--color-bg)] transition hover:brightness-110"
             >
-              <Download size={16} /> Download CV
+              <Download size={16} /> {ui.hero.downloadCv}
             </a>
             <a
               href={`mailto:${profile.email}`}
               className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-6 py-3 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
             >
-              <Mail size={16} /> Get in touch
+              <Mail size={16} /> {ui.hero.getInTouch}
             </a>
           </motion.div>
         </div>
@@ -111,7 +113,7 @@ export default function Hero() {
           <div className="relative overflow-hidden rounded-3xl border border-[var(--color-border)] shadow-2xl">
             <Image
               src="/brand.jpg"
-              alt="Kamel Bshara — AI, Education, Engineering, Design"
+              alt={ui.hero.imageAlt}
               width={1195}
               height={896}
               priority
@@ -123,7 +125,7 @@ export default function Hero() {
 
       <a
         href="#about"
-        aria-label="Scroll to about section"
+        aria-label={ui.hero.scrollToAbout}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[var(--color-muted)] transition hover:text-[var(--color-accent)]"
       >
         <ArrowDown className="animate-bounce" size={22} />

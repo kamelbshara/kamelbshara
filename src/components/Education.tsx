@@ -1,15 +1,20 @@
-import { education, activities, interests } from "@/data/content";
+"use client";
+
+import { useLanguage } from "@/i18n/LanguageContext";
 import SectionHeading from "./SectionHeading";
 
 export default function Education() {
+  const { content, ui } = useLanguage();
+  const { education, activities, interests } = content;
+
   return (
     <section id="education" className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeading eyebrow="07 — Education" title="Education & beyond" />
+      <SectionHeading eyebrow={ui.education.eyebrow} title={ui.education.title} />
 
       <div className="grid gap-6 md:grid-cols-3">
         <div className="md:col-span-2">
           <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-[var(--color-muted)]">
-            Education
+            {ui.education.education}
           </h3>
           <div className="space-y-4">
             {education.map((item) => (
@@ -29,7 +34,7 @@ export default function Education() {
 
         <div>
           <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-[var(--color-muted)]">
-            Activities
+            {ui.education.activities}
           </h3>
           <ul className="mb-6 space-y-2">
             {activities.map((activity) => (
@@ -40,7 +45,7 @@ export default function Education() {
           </ul>
 
           <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-[var(--color-muted)]">
-            Interests
+            {ui.education.interests}
           </h3>
           <div className="flex flex-wrap gap-2">
             {interests.map((interest) => (

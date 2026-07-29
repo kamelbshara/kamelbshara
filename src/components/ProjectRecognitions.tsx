@@ -1,16 +1,18 @@
+"use client";
+
 import { Building2 } from "lucide-react";
-import { projectRecognitions } from "@/data/content";
+import { useLanguage } from "@/i18n/LanguageContext";
 import SectionHeading from "./SectionHeading";
 
 export default function ProjectRecognitions() {
+  const { content, ui } = useLanguage();
+  const { projectRecognitions } = content;
+
   return (
     <section id="project-recognitions" className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeading eyebrow="04 — Project Recognitions" title="Awarded projects I've been part of" />
+      <SectionHeading eyebrow={ui.recognitions.eyebrow} title={ui.recognitions.title} />
 
-      <p className="mb-8 max-w-2xl text-sm text-[var(--color-muted)]">
-        These recognitions were awarded to the project itself, not to me personally — I was part
-        of its construction team, not the recipient of a personal award.
-      </p>
+      <p className="mb-8 max-w-2xl text-sm text-[var(--color-muted)]">{ui.recognitions.disclaimer}</p>
 
       <div className="grid gap-4 sm:grid-cols-2">
         {projectRecognitions.map((item, i) => (

@@ -1,13 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { skills } from "@/data/content";
+import { useLanguage } from "@/i18n/LanguageContext";
 import SectionHeading from "./SectionHeading";
 
 export default function Skills() {
+  const { content, ui } = useLanguage();
+  const { skills } = content;
+
   return (
     <section id="skills" className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeading eyebrow="05 — Skills" title="Tools I bring to the table" />
+      <SectionHeading eyebrow={ui.skills.eyebrow} title={ui.skills.title} />
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {skills.map((group, i) => (
