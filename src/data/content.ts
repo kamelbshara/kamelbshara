@@ -63,7 +63,9 @@ export const experience: Experience[] = [
     org: "IBSF Co. — KAFD Conference Center, KSA",
     period: "2011 – 2013",
     bullets: [
-      "Contributed to large-scale infrastructure at King Abdullah Financial District.",
+      "Served as project engineer on the KAFD Conference Center — a large-scale conference, film, and lecture facility within King Abdullah Financial District, Riyadh.",
+      "Project recognized as the 2nd Most Beautiful Construction Project of 2012.",
+      "Contributed to large-scale infrastructure delivery across the KAFD masterplan.",
       "Gained experience in technical reporting, scheduling, and team coordination.",
     ],
   },
@@ -79,22 +81,56 @@ export const skills: SkillGroup[] = [
   {
     title: "AI & Data",
     level: 85,
-    items: ["AI-driven analytics", "Data interpretation", "Prompt engineering", "LLM-powered app features"],
+    items: [
+      "AI-driven analytics",
+      "Data interpretation",
+      "Prompt engineering",
+      "LLM-powered app features",
+      "Data-driven decision making",
+    ],
   },
   {
     title: "Development",
     level: 75,
-    items: ["Web development (Next.js/React)", "Interactive educational platforms", "Bilingual (AR/EN) product design"],
+    items: [
+      "Web development (Next.js/React)",
+      "Interactive educational platforms",
+      "Bilingual (AR/EN) product design",
+      "UI/UX for learning tools",
+    ],
   },
   {
     title: "Teaching & Curriculum",
     level: 95,
-    items: ["Curriculum design", "Assessment & EmSAT prep", "Data-driven lesson planning", "Student coaching"],
+    items: [
+      "Curriculum design",
+      "Assessment & EmSAT prep",
+      "Data-driven lesson planning",
+      "Student coaching",
+      "Classroom management",
+    ],
   },
   {
-    title: "Leadership",
+    title: "Project & Engineering Delivery",
     level: 90,
-    items: ["Project management", "Team leadership", "Public speaking", "School operations"],
+    items: [
+      "Problem solving",
+      "Resource management",
+      "Value engineering",
+      "Scheduling & cost control",
+      "Cross-functional coordination",
+    ],
+  },
+  {
+    title: "Leadership & Communication",
+    level: 88,
+    items: [
+      "Team leadership",
+      "Public speaking",
+      "School operations",
+      "Stakeholder management",
+      "Strategic planning",
+    ],
   },
 ];
 
@@ -137,10 +173,27 @@ export const education = [
   { degree: "School Leadership Licence", org: "Ministry of Education", period: "2025 –" },
 ];
 
-export const activities = [
-  "EXPO 2020 — Volunteer",
-  "Toastmasters International — Member",
-  "AD Theatre Festival — Story Writing Award",
+export type Award = {
+  title: string;
+  titleAr?: string;
+  org: string;
+  year: string;
+};
+
+export const awards: Award[] = [
+  {
+    title: "Best Playwright — Abu Dhabi School Theatre Festival",
+    titleAr: "أفضل كاتب مسرحي في مهرجان أبوظبي للمسرح المدرسي",
+    org: "Abu Dhabi School Theatre Festival",
+    year: "2023",
+  },
+  {
+    title: "2nd Most Beautiful Construction Project",
+    org: "KAFD Conference Center — IBSF Co., Riyadh, KSA",
+    year: "2012",
+  },
 ];
+
+export const activities = ["EXPO 2020 — Volunteer", "Toastmasters International — Member"];
 
 export const interests = ["Writing", "Rap Music", "Football", "Hiking", "Travelling"];

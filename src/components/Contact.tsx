@@ -5,7 +5,7 @@ import SectionHeading from "./SectionHeading";
 export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeading eyebrow="06 — Contact" title="Let's build something together" />
+      <SectionHeading eyebrow="07 — Contact" title="Let's build something together" />
 
       <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-8">
         <p className="mb-8 max-w-xl leading-relaxed text-[var(--color-muted)]">

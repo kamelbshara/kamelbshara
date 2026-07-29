@@ -7,9 +7,9 @@ import SectionHeading from "./SectionHeading";
 export default function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeading eyebrow="03 — Skills" title="Tools I bring to the table" />
+      <SectionHeading eyebrow="04 — Skills" title="Tools I bring to the table" />
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {skills.map((group, i) => (
           <div
             key={group.title}

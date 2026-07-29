@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 export default function Education() {
   return (
     <section id="education" className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeading eyebrow="05 — Education" title="Education & beyond" />
+      <SectionHeading eyebrow="06 — Education" title="Education & beyond" />
 
       <div className="grid gap-6 md:grid-cols-3">
         <div className="md:col-span-2">
