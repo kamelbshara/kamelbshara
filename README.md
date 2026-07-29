@@ -1,16 +1,23 @@
-## Hi there 👋
+# Kamel Bshara
 
-<!--
-**kamelbshara/kamelbshara** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Math teacher and school leader in the UAE, turned AI & EdTech builder. I bring 6+ years of
+mathematics teaching and 8 years of project management/leadership experience to building
+AI-powered products for education.
 
-Here are some ideas to get you started:
+- Currently building AI tools for classrooms and school operations.
+- Looking for roles in **AI** and **teaching/EdTech**.
+- Reach me at kamelbesharah@gmail.com.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+This repository is also the source for my personal portfolio site — a Next.js app with my CV,
+experience, skills, and the apps I've built (including
+[Khaled Bin Al Waleed Smart Platform](https://kbws.vercel.app), an AI-powered school
+intelligence platform). See `src/` for the site code.
+
+## Running locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
