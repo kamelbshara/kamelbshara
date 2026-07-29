@@ -3,15 +3,17 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { experience } from "@/data/content";
+import { useLanguage } from "@/i18n/LanguageContext";
 import SectionHeading from "./SectionHeading";
 
 export default function Experience() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const { content, ui } = useLanguage();
+  const { experience } = content;
 
   return (
     <section id="experience" className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeading eyebrow="02 — Experience" title="Where I've built and led" />
+      <SectionHeading eyebrow={ui.experience.eyebrow} title={ui.experience.title} />
 
       <div className="space-y-4">
         {experience.map((job, i) => {

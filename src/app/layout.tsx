@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import CircuitBackground from "@/components/CircuitBackground";
+import { LanguageProvider } from "@/i18n/LanguageContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -54,8 +55,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full`}>
       <body className="min-h-full flex flex-col bg-[var(--color-bg)] font-sans antialiased">
-        <CircuitBackground />
-        {children}
+        <LanguageProvider>
+          <CircuitBackground />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
