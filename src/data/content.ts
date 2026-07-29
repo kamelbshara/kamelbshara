@@ -64,7 +64,7 @@ export const experience: Experience[] = [
     period: "2011 – 2013",
     bullets: [
       "Served as project engineer on the KAFD Conference Center — a large-scale conference, film, and lecture facility within King Abdullah Financial District, Riyadh.",
-      "Project recognized as the 2nd Most Beautiful Construction Project of 2012.",
+      "The project later earned LEED Gold Certification (2017) and an AIA Middle East Honor Award (2018).",
       "Contributed to large-scale infrastructure delivery across the KAFD masterplan.",
       "Gained experience in technical reporting, scheduling, and team coordination.",
     ],
@@ -188,9 +188,14 @@ export const awards: Award[] = [
     year: "2023",
   },
   {
-    title: "2nd Most Beautiful Construction Project",
-    org: "KAFD Conference Center — IBSF Co., Riyadh, KSA",
-    year: "2012",
+    title: "AIA Middle East Honor Award",
+    org: "American Institute of Architects — KAFD Conference Center, Riyadh, KSA",
+    year: "2018",
+  },
+  {
+    title: "LEED Gold Certification",
+    org: "KAFD Conference Center — sustainable design & energy performance, Riyadh, KSA",
+    year: "2017",
   },
 ];
 
