@@ -1,5 +1,5 @@
 import { Brain, GraduationCap, Target } from "lucide-react";
-import { profile } from "@/data/content";
+import { profile, stats } from "@/data/content";
 import SectionHeading from "./SectionHeading";
 
 export default function About() {
@@ -12,14 +12,37 @@ export default function About() {
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">{profile.vision}</p>
 
           <p className="mt-4 leading-relaxed text-[var(--color-muted)]">
-            Six years of teaching mathematics and leading school operations in the UAE taught me
-            how to break down hard problems, read data, and design for real people under real
-            constraints. I&apos;m now channeling that same thinking into AI and software — most
-            recently by designing and building an AI-powered school platform from scratch,
-            end to end.
+            I started out as a civil engineer, spending 8 years managing construction and
+            infrastructure projects across Saudi Arabia and the UAE — coordinating teams,
+            controlling budgets and schedules, and solving on-site problems in real time. In
+            2019 I moved into education, and for the past 7 years I&apos;ve taught mathematics
+            in a UAE public school while also taking on 5 years of mid-leadership
+            responsibility — running school operations, safety, and improvement planning
+            alongside a full teaching load.
+          </p>
+
+          <p className="mt-4 leading-relaxed text-[var(--color-muted)]">
+            That combination — engineering discipline, classroom experience, and hands-on
+            school administration — is what I now bring to AI and software. I&apos;m not
+            experimenting from the outside: I&apos;ve built and shipped an AI-powered school
+            platform end to end, along with several smaller AI and automation tools that solve
+            real problems I&apos;ve faced myself as a teacher — generating exam questions,
+            analyzing grades, and planning student follow-up.
           </p>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            {stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4"
+              >
+                <p className="text-3xl font-bold text-gradient">{stat.value}+</p>
+                <p className="mt-1 text-sm text-[var(--color-muted)]">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-4 grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
               <Brain className="mb-2 text-[var(--color-accent)]" size={20} />
               <p className="text-sm text-[var(--color-muted)]">
@@ -29,7 +52,7 @@ export default function About() {
             <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
               <GraduationCap className="mb-2 text-[var(--color-accent)]" size={20} />
               <p className="text-sm text-[var(--color-muted)]">
-                8 years teaching &amp; school leadership
+                Engineering discipline meets classroom experience
               </p>
             </div>
             <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">

@@ -16,6 +16,12 @@ export const profile = {
   cvFile: "/Kamel_Bshara_CV.pdf",
 };
 
+export const stats = [
+  { value: "8", label: "Years in Project Management" },
+  { value: "7", label: "Years in Education" },
+  { value: "5", label: "Years in Mid-Leadership" },
+];
+
 export type Experience = {
   role: string;
   org: string;
@@ -33,19 +39,22 @@ export const experience: Experience[] = [
       "Prepared and coached students for EmSAT mathematics assessments, tracking progress against national benchmarks.",
       "Designed data-driven lesson plans using digital platforms, increasing student engagement by 30%.",
       "Conducted regular grade analysis using UAE School Inspection Framework (USIF) standards to guide teaching quality.",
+      "Built and deployed custom AI and Apps Script tools — exam question generation, grade analysis, and follow-up planning — to support day-to-day teaching workflows.",
+      "Mentored fellow teachers on integrating digital, data-driven methods into lesson delivery.",
       "Led curriculum innovation as school leadership licence holder (MOE, 2025).",
     ],
   },
   {
     role: "Mid Leadership — School Administrator",
     org: "Ministry of Education — UAE",
-    period: "2019 – Present",
+    period: "2021 – Present",
     bullets: [
       "Managed school safety, E-Maturity, and E-Safety files in compliance with MOE and USIF standards.",
       "Led grade analysis cycles aligned to EmSAT performance targets and MOE assessment policy.",
       "Coordinated school timetable, executive planning, and scheduling across departments.",
       "Oversaw student life quality and wellbeing programmes in line with MOE wellbeing framework.",
       "Supported school improvement planning using USIF inspection criteria and continuous development goals.",
+      "Balanced administrative leadership duties alongside a full teaching load.",
     ],
   },
   {
@@ -56,6 +65,9 @@ export const experience: Experience[] = [
       "Managed 7+ concurrent projects across residential, commercial & corporate sectors.",
       "Delivered a villas compound (Royal Commission), showrooms, and corporate HQs.",
       "Coordinated cross-functional teams of engineers, contractors and clients.",
+      "Applied value engineering to balance cost, quality, and schedule trade-offs across builds.",
+      "Managed resource allocation — labor, materials, and equipment — across multiple concurrent sites.",
+      "Solved on-site technical and logistical problems in real time to keep projects on schedule.",
     ],
   },
   {
@@ -66,6 +78,7 @@ export const experience: Experience[] = [
       "Served as project engineer on the KAFD Conference Center — a large-scale conference, film, and lecture facility within King Abdullah Financial District, Riyadh.",
       "The project later earned LEED Gold Certification (2017) and an AIA Middle East Honor Award (2018).",
       "Contributed to large-scale infrastructure delivery across the KAFD masterplan.",
+      "Coordinated resource and subcontractor scheduling amid the project's large-scale technical complexity.",
       "Gained experience in technical reporting, scheduling, and team coordination.",
     ],
   },
