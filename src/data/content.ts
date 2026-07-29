@@ -100,8 +100,12 @@ export const skills: SkillGroup[] = [
       "Prompt engineering",
       "LLM-powered app features",
       "Data-driven decision making",
-      "Big data analysis (beginner)",
     ],
+  },
+  {
+    title: "Big Data Analysis",
+    level: 30,
+    items: ["Beginner-level proficiency"],
   },
   {
     title: "Development",
