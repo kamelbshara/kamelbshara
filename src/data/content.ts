@@ -225,6 +225,38 @@ export const projects: Project[] = [
     link: "https://script.google.com/macros/s/AKfycbyBk-ZdKzIMilz3pWrXP4FN0IzKloL2IhmrLlBnFcqGy2LEycCI0jQWlcmHQtBdljxV/exec",
     status: "Live",
   },
+  {
+    slug: "sat360",
+    name: "SAT360",
+    tagline: "SAT training app to level up student skills",
+    description:
+      "A dedicated SAT training platform built to help students strengthen their skills and prepare for the SAT — practice-driven and structured around steady, measurable improvement.",
+    role: "Creator & builder",
+    stack: ["Web application", "Vercel"],
+    features: [
+      "Structured SAT practice built to level up student skills over time",
+      "Focused, practice-driven prep experience for students",
+    ],
+    link: "https://sat360.vercel.app/",
+    status: "Live",
+  },
+  {
+    slug: "smart-teacher-profile",
+    name: "Smart Teacher Profile",
+    tagline: "AI teaching assistant that documents, plans, and follows up",
+    description:
+      "An AI-powered teacher assistant that acts as a full teaching companion — documenting classroom work, generating lesson plans and reports, analyzing student grades, and following up on student progress as they move forward.",
+    role: "Creator & builder",
+    stack: ["Web application", "AI-generated content", "Vercel"],
+    features: [
+      "Generates lesson plans and reports automatically",
+      "Documents teaching activity in one place",
+      "Analyzes student grades and tracks progress over time",
+      "Follows up on students as they progress, not just a one-time snapshot",
+    ],
+    link: "https://smart-teacher-profile.vercel.app/",
+    status: "Live",
+  },
 ];
 
 export const education = [
