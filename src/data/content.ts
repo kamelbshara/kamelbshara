@@ -7,7 +7,7 @@ export const profile = {
   phone: "+971 54 777 8522",
   languages: "Arabic (Native) · English (IELTS Academic 6.5)",
   vision:
-    "Civil engineer turned mathematics educator, now channeling both disciplines into AI-powered tools that help schools work smarter.",
+    "Licensed Mathematics Educator and UAE Ministry of Education School Leadership Certificate holder with over seven years of experience driving academic excellence, school improvement initiatives, and educational innovation. Combining expertise in mathematics instruction, project management, data-driven decision-making, and AI-powered educational solutions, I contribute strategic thinking, instructional excellence, and innovation that create lasting value across the entire school community.",
   objectives: [
     "Apply years of mathematical thinking to tech and AI roles that solve real problems.",
     "Use data and analytical skills to help teams build smarter, more effective solutions.",
