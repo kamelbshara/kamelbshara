@@ -5,11 +5,11 @@ import SectionHeading from "./SectionHeading";
 export default function ProjectRecognitions() {
   return (
     <section id="project-recognitions" className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeading eyebrow="04 — Project Recognitions" title="Projects I've worked on that earned recognition" />
+      <SectionHeading eyebrow="04 — Project Recognitions" title="Awarded projects I've been part of" />
 
       <p className="mb-8 max-w-2xl text-sm text-[var(--color-muted)]">
-        These were awarded to the project itself, not to me personally — included here because I
-        was part of the team that delivered it.
+        These recognitions were awarded to the project itself, not to me personally — I was part
+        of its construction team, not the recipient of a personal award.
       </p>
 
       <div className="grid gap-4 sm:grid-cols-2">
@@ -28,6 +28,7 @@ export default function ProjectRecognitions() {
               </div>
               <p className="text-sm text-[var(--color-muted)]">{item.project}</p>
               <p className="text-xs text-[var(--color-muted)]">{item.org}</p>
+              <p className="mt-2 font-mono text-xs text-[var(--color-accent)]">{item.myRole}</p>
             </div>
           </div>
         ))}

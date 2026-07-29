@@ -286,6 +286,7 @@ export type ProjectRecognition = {
   project: string;
   org: string;
   year: string;
+  myRole: string;
 };
 
 export const projectRecognitions: ProjectRecognition[] = [
@@ -294,12 +295,14 @@ export const projectRecognitions: ProjectRecognition[] = [
     project: "KAFD Conference Center, Riyadh, KSA",
     org: "American Institute of Architects",
     year: "2018",
+    myRole: "Part of the project construction team — Project Engineer",
   },
   {
     title: "LEED Gold Certification",
     project: "KAFD Conference Center, Riyadh, KSA",
     org: "Sustainable design & energy performance",
     year: "2017",
+    myRole: "Part of the project construction team — Project Engineer",
   },
 ];
 
